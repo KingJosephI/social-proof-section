@@ -1,8 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
 
 :root{
   /* Colors */
@@ -14,4 +11,52 @@
 
 /* Size */
 --size-normal: 15px
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+main {
+  font-size: var(--size-normal);
+  font-family: "League Spartan", sans-serif;
+  padding: 82px 24px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  padding-bottom: 47px;
+  text-align: center;
+  text-wrap: balance;
+
+  h1 {
+    color: var(--very-dark-magenta);
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 32px;
+    letter-spacing: -1.43px;  
+  }
+
+  p {
+    color: var(--dark-grayish-magenta);
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: -0.63px;
+  }
+
+  @media (min-width: 768px) {
+    text-align: left;
+    
+      h1 {
+          font-size: 56px;
+          line-height: 48px;
+          letter-spacing: -2px;
+        }
+  }
 }
