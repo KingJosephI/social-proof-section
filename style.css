@@ -24,6 +24,22 @@ main {
   font-size: var(--size-normal);
   font-family: "League Spartan", sans-serif;
   padding: 82px 24px;
+
+  @media (min-width: 768px) {
+    padding: 100px 165px ;
+  }
+}
+
+.container {
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    
+    .header, 
+    .rating {
+      width: 50%;
+    } 
+  }
 }
 
 .header {
@@ -62,28 +78,121 @@ main {
 }
 
 .rating {
-
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 16px;
-  align-items: center;
-
 
   .rating__card {
-    height: 78px;
-    background-color: var(--light-grayish-magenta);
-    /* text-align: center; */
-    /* padding: 50px 0; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 15px;
+    height: 78px;
+    background-color: var(--light-grayish-magenta);
     border-radius: 8px;
-
+    
     p{
       color: var(--very-dark-magenta);
       font-size: 17px;
       font-weight: 700;
     }
+    
+    @media (min-width: 768px) {
+      flex-direction: row;
+      height: 56px;  
+    }
+  }
+
+  @media (min-width: 768px) {
+
+    .rating__card{
+      width: 445px;
+    }
+
+    .rating__card__one {
+      align-self: start;
+    }
+
+    .rating__card__two {
+      align-self: center;
+    }
+      
+    .rating__card__three {
+      align-self: end;
+    }
+
+}
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 49px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    height: 266px;
+  }
+  
+  .comments__card {
+    font-size: 17px;
+    background-color: var(--very-dark-magenta);
+    border-radius: 8px;
+    padding: 32px;
+
+    .user {
+      display: flex;
+      align-items: center;  
+      gap: 23px; 
+      
+      img {
+        display: block;
+        border-radius: 50%;
+        width: 40px;
+      }
+
+      p {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        color: white;  
+        
+        strong {
+          font-weight: 900;
+        }
+
+        span {
+          color: var(--soft-pink);
+        }
+      }
+
+    }
+
+    > p {
+      
+      line-height: 22px;
+      letter-spacing: -0.3px;
+      font-weight: 500;
+      color: var(--white);
+      padding-top: 23px;
+
+    }
+
+    @media (min-width: 768px) {
+      height: 234px;
+    }
+
+  }
+
+  @media (min-width: 768px) {
+    .comments__card__two {
+      align-self: center;
+    }
+    .comments__card__three {
+      align-self: end;
+    }
   }
 }
+
