@@ -52,11 +52,38 @@ main {
 
   @media (min-width: 768px) {
     text-align: left;
-    
+
       h1 {
           font-size: 56px;
           line-height: 48px;
           letter-spacing: -2px;
         }
+  }
+}
+
+.rating {
+
+  display: grid;
+  gap: 16px;
+  align-items: center;
+
+
+  .rating__card {
+    height: 78px;
+    background-color: var(--light-grayish-magenta);
+    /* text-align: center; */
+    /* padding: 50px 0; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border-radius: 8px;
+
+    p{
+      color: var(--very-dark-magenta);
+      font-size: 17px;
+      font-weight: 700;
+    }
   }
 }
